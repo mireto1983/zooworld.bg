@@ -3,72 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Zooworld</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: white;
-         } 
-         header { background-color: rgb(58, 142, 29); color: white; padding: 10px 0; text-align: center; 
-        }
-         nav ul { list-style-type: none; padding: 0;
-         } 
-         nav ul li { display: inline; margin-right: 20px; 
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: white; 
         } 
-        nav ul li a { color: white; text-decoration: none;
-         }
-          main { padding: 20px; 
+        header { background-color: rgb(58, 142, 29); color: white; padding: 50px 0; text-align: center; position: relative; 
         } 
-        section { margin-bottom: 20px; padding: 20px; background-color: white border 1px solid #ddd; 
-        }
-         .product { border-bottom: 1px solid #ddd; margin-bottom: 10px; padding-bottom: 10px; 
+        .paw img { position: absolute; top: 10px; center: 10px; 
         } 
-        footer { background-color: rgb(58, 142, 29); color; color: white; text-align: center; padding: 10px 0; position: fixed; width: 100%; bottom: 0; 
+        nav ul { list-style-type: none; padding: 0; margin: 0; display: flex; justify-content: center;
+        } 
+        nav ul li { position: relative; margin-right: 20px;
+        } nav ul li a { color: white; text-decoration: none; padding: 10px;
         }
-        .picture { display: flex; justify-content:center; align-items: center; height: 80vh;
+        nav ul li ul.dropdown { display: none; position: absolute; top: 40px; left: 0; background-color: rgb(58, 142, 29); padding: 0; list-style-type: none; min-width: 150px;
+        }
+        nav ul li:hover ul.dropdown { display: block;
+        }
+        nav ul li ul.dropdown li { margin: 0;
+        }
+        nav ul li ul.dropdown li a { display: block; padding: 10px; color: white; text-decoration: none;
+        }
+        nav ul li ul.dropdown li a:hover { background-color: #444;
+        }
+        main { padding: 20px;
+        }
+        section { margin-bottom: 20px; padding: 20px; background-color: white; 
+        }
+        .product { border-bottom:  margin-bottom: 10px; padding-bottom: 10px;
+        }
+        footer { background-color: rgb(58, 142, 29); color: white; text-align: center; padding: 10px 0; position: fixed; width: 100%; bottom: 0;
+        }
+        .picture { display: flex; justify-content: center; align-items: center; height: 80vh;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="paw"><img src="../images/paw-solid.svg" alt="paw-solid" width="60"></div>
-        <h1>Добре дошли в "Zooworld"</h1>
-         <nav>
-            <ul>
-                <li><a href="#home">Начало</a></li>
-                 <li><a href="#products">Продукти</a></li>
-                  <li><a href="#about">За нас</a></li>
-                   <li><a href="#contact">Контакти</a></li>
-               </ul>
-            </nav>
+        <div class="paw">
+           <img src="../images/paw-solid.svg" alt="paw-solid" width="60">
+       </div>
+       <h1>Добре дошли в "Zooworld"</h1>
+       <nav>
+           <ul>
+               <li><a href="#home">Начало</a></li>
+               <li><a href="#products">Продукти</a>
+                   <ul class="dropdown">
+                       <li><a href="#dogfood">Храна за кучета</a></li>
+                       <li><a href="#catfood">Храна за котки</a></li>
+                       <li><a href="#pettoys">Играчки за домашни любимци</a></li>
+                   </ul>
+               </li>
+               <li><a href="#about">За нас</a></li>
+               <li><a href="#contact">Контакти</a></li>
+           </ul>
+       </nav>
    </header>
    <div class="picture"><img src="../images/care-8802281_1280.jpg" alt="pictures" width="400"></div>
    <main>
-     <section id="home">
-        <h2>Начало</h2> <p>Тук можете да намерите всичко необходимо за вашите домашни любимци.</p>
-    </section>
-     <section id="products">
-            <h2>Продукти</h2>
-            <div class="product">
-            <h3>Храна за кучета <img src="../images/dog-solid.svg" alt="dog-solid" width="30"></h3>
-             <p>Висококачествена храна за кучета от водещи марки.</p>
+       <section id="home">
+           <h2>Начало</h2>
+           <p>Тук можете да намерите всичко необходимо за вашите домашни любимци.</p>
+           <div>
+               <img src="../images/download (1).jpg" alt="Animals">
            </div>
-            <div class="product">
-                 <h3>Храна за котки <img src="../images/cat-solid.svg" alt="cat-solid" width="30"></h3>
-            <p>Най-добрата храна за котки, обичана от всички котки.</p>
-            </div>
-            <div class="product">
-            <h3>Играчки за домашни любимци <img src="../images/bone-solid.svg" alt="bone-solid" width="30"></h3>
-            <p>Разнообразие от играчки, които ще донесат радост на вашите любимци.</p>
-            </div>
-        </section>
-         <section id="about">
-            <h2>За нас</h2>
-             <p>Ние сме екип, посветен на грижата за вашите домашни любимци. Нашата мисия е да предложим най-доброто за тях.</p> </section> <section id="contact">
-            <h2>Контакти</h2>
-            <p>Свържете се с нас на email@example.com или на телефон 123-456-7890.</p>
-        </section>
-        </main>
-            <footer>
-            <p>&copy; 2024 Онлайн Зоомагазин. Всички права запазени.</p>
-            </footer>
+       </section>
+       <section id="products">
+           <h2>Продукти</h2>
+           <div class="product"> <h3 id="dogfood">Храна за кучета</h3> <p>Висококачествена храна за кучета от водещи марки.</p>
+           </div>
+           <div class="dogs">
+               <img src="../images/UJBS4968.JPG" alt="Dogs" width="300">
+           </div>
+           <div class="product"> <h3 id="catfood">Храна за котки</h3>
+               <p>Най-добрата храна за котки, обичана от всички котки.</p>
+           </div>
+           <div>
+               <img src="../images/images.jpg" alt="Cats">
+           </div>
+           <div class="product"> <h3 id="pettoys">Играчки за домашни любимци</h3>
+           <p>Разнообразие от играчки, които ще донесат радост на вашите любимци.</p>
+           </div>
+           <div>
+               <img src="../images/toys.jpg" alt="Toys">
+           </div>
+       </section>
+       <section id="about">
+           <h2>За нас</h2>
+           <p>Ние сме екип, посветен на грижата за вашите домашни любимци. Нашата мисия е да предложим най-доброто за тях.</p>
+       </section>
+       <div>
+           <img src="../images/Help a paw.jpg" alt="Help Animals">
+       </div>
+       <section id="contact">
+           <h2>Контакти</h2>
+           <p>Свържете се с нас на email@example.com или на телефон 123-456-7890.</p>
+       </section>
+   </main>
+   <footer>
+       <p>&copy; 2024 Онлайн Зоомагазин. Всички права запазени.</p>
+   </footer>
+   <script src="script.js"></script>
 </body>
 </html>
